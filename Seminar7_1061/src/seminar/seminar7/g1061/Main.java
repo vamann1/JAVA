@@ -21,7 +21,8 @@ public class Main {
 
             //Inmultire pe un singur fir
            Date start =  new Date();
-           Operatiuni<Double> o = new Operatiuni<Double>() {
+           Operatiuni<Double> o = new Operatiuni<Double>()
+           {
                @Override
                public Double init() {
                    return 0.0;
@@ -62,7 +63,7 @@ public class Main {
                fire.add(new Thread( new Inmultire<>(x, l1, l2, y, z, o )));
                l1=l2+1;
            }
-           for( Thread fir:fire){
+           for(Thread fir:fire){
                fir.start();
            }
            for(Thread fir:fire){
